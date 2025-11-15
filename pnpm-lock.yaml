@@ -13,7 +13,7 @@ importers:
         version: 2.9.2(react-redux@9.2.0(@types/react@19.2.2)(react@19.2.0)(redux@5.0.1))(react@19.2.0)
       next:
         specifier: ^15.5.6
-        version: 15.5.6(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.93.1)
+        version: 15.5.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.93.1)
       react:
         specifier: ^19.2.0
         version: 19.2.0
@@ -33,24 +33,12 @@ importers:
       '@eslint/js':
         specifier: ^9.36.0
         version: 9.36.0
-      '@testing-library/jest-dom':
-        specifier: ^6.9.1
-        version: 6.9.1
-      '@testing-library/react':
-        specifier: ^16.3.0
-        version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@types/jest':
-        specifier: ^30.0.0
-        version: 30.0.0
       '@types/react':
         specifier: ^19.2.2
         version: 19.2.2
       '@types/react-dom':
         specifier: ^19.2.2
         version: 19.2.2(@types/react@19.2.2)
-      babel-jest:
-        specifier: ^30.2.0
-        version: 30.2.0(@babel/core@7.28.5)
       cross-env:
         specifier: ^10.1.0
         version: 10.1.0
@@ -78,15 +66,6 @@ importers:
       husky:
         specifier: ^9.1.7
         version: 9.1.7
-      identity-obj-proxy:
-        specifier: ^3.0.0
-        version: 3.0.0
-      jest:
-        specifier: ^30.2.0
-        version: 30.2.0(@types/node@24.10.0)
-      jest-environment-jsdom:
-        specifier: ^30.2.0
-        version: 30.2.0
       lint-staged:
         specifier: ^16.1.6
         version: 16.2.0
@@ -105,9 +84,6 @@ importers:
       stylelint-prettier:
         specifier: ^5.0.3
         version: 5.0.3(prettier@3.6.2)(stylelint@16.24.0(typescript@5.9.2))
-      ts-jest:
-        specifier: ^29.4.5
-        version: 29.4.5(@babel/core@7.28.5)(@jest/transform@30.2.0)(@jest/types@30.2.0)(babel-jest@30.2.0(@babel/core@7.28.5))(jest-util@30.2.0)(jest@30.2.0)(typescript@5.9.2)
       typescript-eslint:
         specifier: ^8.44.0
         version: 8.44.1(eslint@9.36.0)(typescript@5.9.2)
@@ -183,7 +159,7 @@ importers:
         version: 1.93.1
       ts-jest:
         specifier: ^29.4.5
-        version: 29.4.5(@babel/core@7.28.5)(@jest/transform@30.2.0)(@jest/types@30.2.0)(babel-jest@30.2.0(@babel/core@7.28.5))(jest-util@30.2.0)(jest@30.2.0)(typescript@5.9.2)
+        version: 29.4.5(@babel/core@7.28.5)(@jest/transform@30.2.0)(@jest/types@30.2.0)(babel-jest@30.2.0(@babel/core@7.28.5))(jest-util@30.2.0)(jest@30.2.0(@types/node@24.10.0))(typescript@5.9.2)
       typescript:
         specifier: ^5.9.2
         version: 5.9.2
@@ -5606,16 +5582,6 @@ snapshots:
       '@types/react': 19.2.2
       '@types/react-dom': 19.1.9(@types/react@19.2.2)
 
-  '@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
-    dependencies:
-      '@babel/runtime': 7.28.4
-      '@testing-library/dom': 10.4.1
-      react: 19.2.0
-      react-dom: 19.2.0(react@19.2.0)
-    optionalDependencies:
-      '@types/react': 19.2.2
-      '@types/react-dom': 19.2.2(@types/react@19.2.2)
-
   '@tybys/wasm-util@0.10.1':
     dependencies:
       tslib: 2.8.1
@@ -7626,7 +7592,7 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next@15.5.6(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.93.1):
+  next@15.5.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.93.1):
     dependencies:
       '@next/env': 15.5.6
       '@swc/helpers': 0.5.15
@@ -7634,7 +7600,7 @@ snapshots:
       postcss: 8.4.31
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
-      styled-jsx: 5.1.6(@babel/core@7.28.5)(react@19.2.0)
+      styled-jsx: 5.1.6(react@19.2.0)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.5.6
       '@next/swc-darwin-x64': 15.5.6
@@ -8290,12 +8256,10 @@ snapshots:
     optionalDependencies:
       '@babel/core': 7.28.5
 
-  styled-jsx@5.1.6(@babel/core@7.28.5)(react@19.2.0):
+  styled-jsx@5.1.6(react@19.2.0):
     dependencies:
       client-only: 0.0.1
       react: 19.2.0
-    optionalDependencies:
-      '@babel/core': 7.28.5
 
   stylelint-config-recommended-scss@16.0.1(postcss@8.5.6)(stylelint@16.24.0(typescript@5.9.2)):
     dependencies:
@@ -8446,7 +8410,7 @@ snapshots:
     dependencies:
       typescript: 5.9.2
 
-  ts-jest@29.4.5(@babel/core@7.28.5)(@jest/transform@30.2.0)(@jest/types@30.2.0)(babel-jest@30.2.0(@babel/core@7.28.5))(jest-util@30.2.0)(jest@30.2.0)(typescript@5.9.2):
+  ts-jest@29.4.5(@babel/core@7.28.5)(@jest/transform@30.2.0)(@jest/types@30.2.0)(babel-jest@30.2.0(@babel/core@7.28.5))(jest-util@30.2.0)(jest@30.2.0(@types/node@24.10.0))(typescript@5.9.2):
     dependencies:
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
