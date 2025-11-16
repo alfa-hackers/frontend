@@ -4,9 +4,11 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   max-width: 600px;
+  overflow-y: scroll;
+  @include hide-scrollbar();
   display: flex;
   flex-direction: column;
   z-index: 1002;
@@ -23,9 +25,8 @@
 
 .modal-content {
   width: 80%;
-  margin: 20px;
-  margin-top: 0;
-  padding: 20px;
+  margin: 0 20 20 20;
+  padding: 0 20 20 20;
   color: $color-text;
   border-radius: $radius-lg;
   animation: fadeIn 0.3s ease;
