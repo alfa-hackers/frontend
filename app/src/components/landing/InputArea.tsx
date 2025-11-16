@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
-import '@/styles/landing/inputarea.scss'
+import '../../styles/landing/inputarea.scss'
 import {
   FileAttachment,
   MessageFlag,

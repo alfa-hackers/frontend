@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import '@/styles/landing/formatdropdown.scss'
+import '../../styles/landing/formatdropdown.scss'
 import { FORMAT_FLAGS } from './consts'
 
 interface FormatOption {
