@@ -124,7 +124,7 @@ button.format-option {
 
 .format-icon {
   font-size: clamp(1rem, 0.6vw, 1.2rem);
-  min-width: 24px;
+  min-width: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,43 +135,4 @@ button.format-option {
   font-size: clamp(0.8rem, 0.6vw, 1rem);
   color: $color-dark;
   text-overflow: ellipsis;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .dropdown-toggle,
-  .format-option,
-  .dropdown-menu {
-    transition: none;
-  }
-}
-
-@media (width <= 768px) {
-  .dropdown-menu {
-    max-width: 100px;
-    border-radius: $radius-sm;
-    margin-bottom: 8px;
-  }
-
-  .viewport .input-area button.format-option {
-    height: 30px;
-    width: 90%;
-  }
-
-  .format-option {
-    padding: 10px 14px;
-    font-size: 14px;
-  }
-}
-
-@media (width <= 480px) {
-  .dropdown-menu {
-    max-width: 100px;
-    border-radius: $radius-sm;
-    margin-bottom: 8px;
-  }
-
-  .format-option {
-    padding: 10px 14px;
-    font-size: 14px;
-  }
 }

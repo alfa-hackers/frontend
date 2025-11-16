@@ -1,3 +1,13 @@
+@import '../Global/variables.scss';
+
+@media (prefers-reduced-motion: reduce) {
+  .dropdown-toggle,
+  .format-option,
+  .dropdown-menu {
+    transition: none;
+  }
+}
+
 @media (width <= 1200px) {
   .viewport {
     .messages {
@@ -7,6 +17,11 @@
     .input-area .input-wrapper {
       max-width: 90%;
     }
+  }
+
+  .format-icon {
+    min-width: 10px;
+    margin-right: 5px;
   }
 }
 
@@ -98,7 +113,29 @@
         height: 40px;
         font-size: 18px;
       }
+
+      button.format-option {
+        height: 30px;
+        width: 90%;
+      }
     }
+  }
+
+  .dropdown-menu {
+    max-width: 100px;
+    border-radius: $radius-sm;
+    margin-bottom: 8px;
+  }
+
+  .format-option {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .format-icon {
+    min-width: 10px;
+    margin-right: 5px;
+    width: 16px;
   }
 }
 
@@ -196,5 +233,22 @@
         }
       }
     }
+  }
+
+  .dropdown-menu {
+    max-width: 140px;
+    border-radius: $radius-sm;
+    margin-bottom: 8px;
+  }
+
+  .format-option {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .format-icon {
+    min-width: 10px;
+    margin-right: 5px;
+    width: 16px;
   }
 }
