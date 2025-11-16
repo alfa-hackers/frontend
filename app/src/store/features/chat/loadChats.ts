@@ -81,25 +81,13 @@ export const loadChats = createAsyncThunk('chat/loadChats', async () => {
                 msg.file_address
               )
               try {
-                let cleanFileUrl = msg.file_address
-
-                if (
-                  cleanFileUrl.startsWith('http://') ||
-                  cleanFileUrl.startsWith('https://')
-                ) {
-                  const urlObj = new URL(cleanFileUrl)
-                  cleanFileUrl = urlObj.pathname.substring(1)
-                }
-
-                console.log('[loadChats] Clean fileUrl:', cleanFileUrl)
-
                 const presignedResponse = await fetch(
                   `${apiUrl}/presigned/download`,
                   {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     credentials: 'include',
-                    body: JSON.stringify({ fileUrl: cleanFileUrl }),
+                    body: JSON.stringify({ fileUrl: msg.file_address }),
                   }
                 )
 
