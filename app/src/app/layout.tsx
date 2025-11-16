@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   description:
     '⚡ Lightning-fast. 🧠 Mind-blowing smart. 💎 Insanely accurate. Experience the AI that doesnt just answer—it transforms how you work, create, and think. From coding wizardry to creative breakthroughs, this is the assistant that redefines possible. Try it now and feel the future.',
   openGraph: {
-    title: 'Revolutionary AI Bot | Your Personal Genius Unleashed',
+    title: 'Revolutionary AI Bot | Your Personal Genius',
     description:
       '⚡ Lightning-fast. 🧠 Mind-blowing smart. 💎 Insanely accurate. Experience the AI that doesnt just answer—it transforms how you work, create, and think. From coding wizardry to creative breakthroughs, this is the assistant that redefines possible. Try it now and feel the future.',
     url: 'https://dev.whirav.ru/',
     siteName: 'Revolutionary AI Bot',
     images: [
       {
-        url: 'https://i.pinimg.com/1200x/42/4c/56/424c563e3152e946bf84c0d2f41929d3.jpg',
+        url: 'https://i.pinimg.com/736x/4e/97/87/4e9787bbeb50db9014c4d30ab7e38785.jpg',
         width: 1200,
         height: 630,
       },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description:
       '⚡ Lightning-fast. 🧠 Mind-blowing smart. 💎 Insanely accurate. Experience the AI that doesnt just answer—it transforms how you work, create, and think. From coding wizardry to creative breakthroughs, this is the assistant that redefines possible. Try it now and feel the future.',
     images: [
-      'https://i.pinimg.com/1200x/42/4c/56/424c563e3152e946bf84c0d2f41929d3.jpg',
+      'https://i.pinimg.com/736x/4e/97/87/4e9787bbeb50db9014c4d30ab7e38785.jpg',
     ],
   },
 }
@@ -42,8 +42,14 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <meta property="og:title" content="Revolutionary AI Bot" />
-        <meta property="og:description" content="Super fast AI assistant that transforms how you work, create, and think." />
-        <meta property="og:image" content="https://i.pinimg.com/1200x/42/4c/56/424c563e3152e946bf84c0d2f41929d3.jpg" />
+        <meta
+          property="og:description"
+          content="Super fast AI assistant that transforms how you work, create, and think."
+        />
+        <meta
+          property="og:image"
+          content="https://i.pinimg.com/736x/4e/97/87/4e9787bbeb50db9014c4d30ab7e38785.jpg"
+        />
         <meta property="og:url" content="https://dev.whirav.ru/" />
       </Head>
       <body>
