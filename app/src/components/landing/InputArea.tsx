@@ -138,25 +138,29 @@ const InputArea: React.FC<InputAreaProps> = ({
     e.preventDefault()
     setIsDragging(false)
 
-    const file = e.dataTransfer.files?.[0]
-    if (!file) return
+    const files = e.dataTransfer.files
+    if (!files || files.length === 0) return
 
     const newAttachments: FileAttachment[] = []
-    const error = validateFile(file)
 
-    if (error) {
-      alert(error)
-      return
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i]
+      const error = validateFile(file)
+
+      if (error) {
+        alert(error)
+        continue
+      }
+
+      const base64 = await convertFileToBase64(file)
+
+      newAttachments.push({
+        filename: file.name,
+        mimeType: file.type as FileAttachment['mimeType'],
+        data: base64,
+        size: file.size,
+      })
     }
-
-    const base64 = await convertFileToBase64(file)
-
-    newAttachments.push({
-      filename: file.name,
-      mimeType: file.type as FileAttachment['mimeType'],
-      data: base64,
-      size: file.size,
-    })
 
     onAttachmentsChange([...attachments, ...newAttachments])
 
@@ -226,6 +230,7 @@ const InputArea: React.FC<InputAreaProps> = ({
           placeholder={getPlaceholder()}
           rows={1}
           disabled={isInputDisabled}
+          style={{ resize: 'none', overflow: 'hidden' }}
         />
 
         <FormatDropdown
