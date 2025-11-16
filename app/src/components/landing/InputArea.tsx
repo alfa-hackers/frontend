@@ -230,7 +230,7 @@ const InputArea: React.FC<InputAreaProps> = ({
           placeholder={getPlaceholder()}
           rows={1}
           disabled={isInputDisabled}
-          style={{ resize: 'none', overflow: 'hidden' }}
+          style={{ resize: 'none' }}
         />
 
         <FormatDropdown

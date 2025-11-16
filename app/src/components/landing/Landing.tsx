@@ -17,10 +17,10 @@ import Sidebar from './Sidebar'
 import MainViewport from './MainViewport'
 import RegisterModal from './RegisterModal'
 import LoginModal from './LoginModal'
-import '@/styles/landing/landing.scss'
-import '@/styles/Media/mobile.scss'
 import { loadChats } from '../../store/features/chat/loadChats'
 import { initializeAuth } from '../../store/features/auth/authSlice'
+import '@/styles/landing/landing.scss'
+import '@/styles/Media/mobile.scss'
 
 const ChatLanding: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>()
