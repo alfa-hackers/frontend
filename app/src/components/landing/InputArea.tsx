@@ -31,7 +31,6 @@ const InputArea: React.FC<InputAreaProps> = ({
   const textareaRef = useRef<HTMLTextAreaElement>(null)
   const [selectedFlag, setSelectedFlag] = useState<MessageFlag>('text')
   const [isDragging, setIsDragging] = useState(false)
-  const [selectedFormat, setSelectedFormat] = useState('text');
 
   const adjustTextareaHeight = () => {
     const textarea = textareaRef.current
@@ -194,7 +193,8 @@ const InputArea: React.FC<InputAreaProps> = ({
         </div>
       )}
 
-      <div className={`input-wrapper ${isDragging ? 'dragging' : ''}`}
+      <div
+        className={`input-wrapper ${isDragging ? 'dragging' : ''}`}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
@@ -229,8 +229,10 @@ const InputArea: React.FC<InputAreaProps> = ({
         />
 
         <FormatDropdown
-          selectedFlag={selectedFormat}
-          setSelectedFlag={setSelectedFormat}
+          selectedFlag={selectedFlag}
+          setSelectedFlag={(value: string) =>
+            setSelectedFlag(value as MessageFlag)
+          }
           isInputDisabled={isInputDisabled}
         />
 
